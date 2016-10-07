@@ -140,14 +140,17 @@ h3 {
     border-color: transparent transparent white transparent;
 }
 
+.section-social {
+    background-color:#F0F0F0;
+}
+
 footer {
     font-family:'Open Sans', sans-serif;
-    font-weight:bold;
 }
 
 .footer-partners {
     display:flex;
-    
+    margin:10px 0px;
 }
 
 #uitgeverij {
@@ -175,11 +178,62 @@ footer {
     background-repeat:no-repeat;
     display:block;
     height:60px;
-    width:auto;
+    min-width:40px;
 }
 
 .footer-text {
     text-align:center;
+    margin-top:10px;
 }
 
+.footer-text div {
+    margin-bottom:10px;
+}
+
+a.footer-madeBy:link,
+a.footer-madeBy:visited,
+a.footer-madeBy:hover,
+a.footer-madeBy:active {
+    color:#4D4D4D;
+}
+
+.footer-partners {
+    display: flex;
+    justify-content: space-between;
+    margin:10px 10px;
+}
+
+@media (min-width:767px) {
+    .footer-text {
+        display:flex;
+        justify-content: space-between;
+    }
+    
+    .bvItem-title {
+        width:50%;
+    }
+    
+    .bvItem {
+        max-width:25%;
+    }
+    
+    .bvItem-title {
+        margin:0px;
+        padding:40px 20px 40px 20px;
+        box-sizing: border-box;
+    }
+    
+    .section-bv {
+        display:flex;
+        flex-wrap:wrap;
+        flex-grow: 1;
+    }
+}
+
+@media (min-width:1000px) {
+    .footer-container {
+        max-width:1000px;
+        margin:0px auto;
+    }
+}
 /* 320 - 767 - 960 - Container 1200 */
