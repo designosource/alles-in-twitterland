@@ -1,0 +1,72 @@
+body {
+    font-family:'Roboto', sans-serif;
+}
+
+header {
+    background: #d6d6d6; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #d6d6d6 0%, #ffffff 89%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #d6d6d6 0%,#ffffff 89%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #d6d6d6 0%,#ffffff 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding:25px 25px 25px 0px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color:#33A2EA;
+    text-decoration: none;
+}
+
+h1 {
+    color:#4D4D4D;
+    font-size:2.5em;
+    font-weight:lighter;
+}
+
+h2 {
+    color:#4D4D4D;
+    font-size:1.2em;
+    font-weight:lighter;
+}
+
+.header-text > h2 {
+    margin-bottom:40px;
+}
+
+.header-text p {
+    color:#808080;
+    font-size:1em;
+    line-height:1.4em;
+}
+
+.CTA-button:link,
+.CTA-button:visited,
+.CTA-button:hover,
+.CTA-button:active {
+    background-color:#33A2EA;
+    padding:20px 26px;
+    color:white;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius:2px;
+}
+
+.header-price {
+    color:#808080;
+}
+
+.header-image {
+    background-image:url(../images/Twitter-boek.png);
+    width:100%;
+    height:400px;
+    background-position:center -160px;
+}
+
+footer {
+    font-family:'Open Sans', sans-serif;
+    font-weight:bold;
+}
+
+/* 320 - 767 - 960 - Container 1200 */
