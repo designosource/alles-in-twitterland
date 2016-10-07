@@ -164,6 +164,7 @@ footer {
 .footer-partners {
     display:flex;
     margin:20px 0px;
+    align-content: center;
 }
 
 #uitgeverij {
@@ -190,8 +191,9 @@ footer {
     background-size:contain;
     background-repeat:no-repeat;
     display:block;
-    height:60px;
-    min-width:40px;
+    height:70px;
+    min-width:50px;
+    background-position:center;
 }
 
 .footer-text {
@@ -336,6 +338,10 @@ a.footer-madeBy:active {
         width:50%;
     }
     
+    .social-container > div:first-child {
+        margin-right:30px;
+    }
+    
     .social-invitation h2 {
         margin:0px 0px 20px 0px;
     }
@@ -353,7 +359,13 @@ a.footer-madeBy:active {
     }
 }
 
-@media (min-width:1020px) {
-    
+@media (min-width:1010px) {
+    .header-image {
+        background-image: url(../images/Twitter-boek.png);
+        width: 100%;
+        height: 400px;
+        background-position: center -50px;
+        background-size: 200%;
+    }
 }
 /* 320 - 767 - 960 - Container 1200 */
