@@ -8,7 +8,11 @@ header {
     background: -webkit-radial-gradient(center, ellipse cover, #d6d6d6 0%,#ffffff 89%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at center, #d6d6d6 0%,#ffffff 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    padding:25px 25px 25px 0px;
+    padding:25px 25px 0px 25px;
+}
+
+.header-container {
+    /*padding:25px 25px 0px 25px;*/
 }
 
 a:link,
@@ -17,6 +21,20 @@ a:hover,
 a:active {
     color:#33A2EA;
     text-decoration: none;
+    -moz-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+a:hover {
+    color:#2995db;
+}
+
+p {
+    color:#4D4D4D;
+    line-height:1.4em;
+    font-weight:lighter;
 }
 
 h1 {
@@ -25,7 +43,7 @@ h1 {
     font-weight:lighter;
 }
 
-h2 {
+h2.header {
     color:#4D4D4D;
     font-size:1.2em;
     font-weight:lighter;
@@ -39,6 +57,7 @@ h2 {
     color:#808080;
     font-size:1em;
     line-height:1.4em;
+    margin-bottom:20px;
 }
 
 .CTA-button:link,
@@ -51,10 +70,19 @@ h2 {
     display: inline-block;
     text-transform: uppercase;
     border-radius:2px;
+    -moz-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.CTA-button:hover {
+    background-color:#2995db;
 }
 
 .header-price {
     color:#808080;
+    margin-top:20px;
 }
 
 .header-image {
@@ -64,9 +92,94 @@ h2 {
     background-position:center -160px;
 }
 
+.aboutUs-text {
+    margin:40px 20px 40px 20px;
+}
+
+h2 {
+    color:#4D4D4D;
+    font-size:2.2em;
+    font-weight:lighter;    
+}
+
+h3 {
+    color:#4D4D4D;
+    font-size:1.1em;
+    font-weight:lighter;  
+}
+
+.aboutUs-text > h3 {
+    margin-bottom:40px;
+}
+
+.aboutUs-picture {
+    width:100%;
+}
+
+.bvItem-title {
+    margin:40px 20px 40px 20px;
+}
+
+.bvItem-image img {
+    width:100%;
+}
+
+.bvItem-text {
+    padding:16px;
+    position:relative;
+}
+
+.bvItem-text:before {
+    width: 0;
+    height: 0;
+    top:-20px;
+    position: absolute;
+    content:"";
+    border-style: solid;
+    border-width: 0 15px 20px 15px;
+    border-color: transparent transparent white transparent;
+}
+
 footer {
     font-family:'Open Sans', sans-serif;
     font-weight:bold;
+}
+
+.footer-partners {
+    display:flex;
+    
+}
+
+#uitgeverij {
+    background-image:url(../images/partners/uitgeverij.png);
+}
+
+#darmkanker {
+    background-image:url(../images/partners/darmkanker.png);
+}
+
+#thomasmore {
+    background-image:url(../images/partners/thomas-more.png);
+}
+
+#designosource {
+    background-image:url(../images/partners/designosource-logo.png);
+}
+
+.footer-partners a:link,
+.footer-partners a:visited,
+.footer-partners a:hover,
+.footer-partners a:active {
+    text-indent:-9999px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:block;
+    height:60px;
+    width:auto;
+}
+
+.footer-text {
+    text-align:center;
 }
 
 /* 320 - 767 - 960 - Container 1200 */
