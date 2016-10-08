@@ -195,7 +195,7 @@ footer {
 }
 
 #designosource {
-    background-image:url(../images/partners/designosource-logo.png);
+    background-image:url(../images/partners/designosource.svg);
 }
 
 .footer-partners a:link,
@@ -213,11 +213,11 @@ footer {
 
 .footer-text {
     text-align:center;
-    margin-top:10px;
+    margin:10px 0px;
 }
 
 .footer-text div {
-    margin-bottom:10px;
+    line-height:25px;
 }
 
 a.footer-madeBy:link,
@@ -225,6 +225,12 @@ a.footer-madeBy:visited,
 a.footer-madeBy:hover,
 a.footer-madeBy:active {
     color:#4D4D4D;
+    background-image:url(../images/egg-design.svg);
+    background-size:20px 20px;
+    background-repeat:no-repeat;
+    background-position:left center;
+    padding-left:25px;
+    line-height:25px;
 }
 
 .footer-partners {
