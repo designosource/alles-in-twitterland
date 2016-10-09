@@ -106,6 +106,10 @@ h2.header {
     margin:40px 20px 40px 20px;
 }
 
+.nieuws-text {
+    margin:40px 20px 40px 20px;
+}
+
 h2 {
     color:#4D4D4D;
     font-size:2.2em;
@@ -259,6 +263,19 @@ a.button-tweet:hover {
     background-color:#2995db;
 }
 
+.section-nieuws {
+    max-width:1000px;
+    margin:0px auto;
+}
+
+.nieuws-container {
+    margin:50px 0px 0px 0px;
+}
+
+.nieuws-article-text p:last-child {
+    margin-top:10px;
+}
+
 @media (min-width:560px)
 {
     .header-image {
@@ -405,6 +422,18 @@ a.button-tweet:hover {
     .aboutUs-picture {
         width:50%;
         height:50%;
+    }
+    
+    .nieuws-container {
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nieuws-article {
+        max-width:45%;
+        margin-bottom:35px;
     }
 }
 
