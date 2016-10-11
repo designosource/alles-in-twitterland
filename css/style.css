@@ -17,6 +17,7 @@ header {
 
 nav {
     padding:0px 20px 0px 0px;
+    display:none;
 }
 
 a:link,
@@ -120,6 +121,7 @@ h3 {
     color:#4D4D4D;
     font-size:1.1em;
     font-weight:lighter;  
+    margin-top:5px;
 }
 
 .aboutUs-text > .aboutUs-text-container > h3 {
@@ -136,6 +138,27 @@ h3 {
 
 .bvItem-image img {
     width:100%;
+}
+
+.bvItem-image {
+    position:relative;
+    overflow:hidden;
+}
+
+.bvItem-image img {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.bvItem-image:hover img {
+    -webkit-transform:scale(1.15); /* Safari and Chrome */
+    -moz-transform:scale(1.15); /* Firefox */
+    -ms-transform:scale(1.15); /* IE 9 */
+    -o-transform:scale(1.15); /* Opera */
+     transform:scale(1.15);
 }
 
 .bvItem-text {
@@ -164,7 +187,7 @@ h3 {
 }
 
 .social-container {
-    padding:20px;
+    padding:50px;
 }
 
 .social-invitation h2 {
@@ -188,18 +211,22 @@ footer {
 
 #uitgeverij {
     background-image:url(../images/partners/uitgeverij.png);
+    width:59px;
 }
 
 #darmkanker {
     background-image:url(../images/partners/darmkanker.png);
+    width:70px;
 }
 
 #thomasmore {
     background-image:url(../images/partners/thomas-more.png);
+    width:148px;
 }
 
 #designosource {
     background-image:url(../images/partners/designosource.svg);
+    width:70px;
 }
 
 .footer-partners a:link,
@@ -243,6 +270,10 @@ a.footer-madeBy:active {
     margin:20px 0px;
 }
 
+.bvItem-title-container > p {
+    margin-top:5px;
+}
+
 a.button-tweet:link,
 a.button-tweet:visited,
 a.button-tweet:hover,
@@ -250,13 +281,17 @@ a.button-tweet:active
 {
     background-color:#33A2EA;
     color:white;
-    padding:20px 20px;
+    padding:20px 20px 20px 50px;
     width:100%;
     max-width:520px;
     display:block;
     border-radius:2px;
     box-sizing: border-box;
     margin-bottom:15px;
+    background-image:url(../images/Twitter-logo.png);
+    background-size:25px 20px;
+    background-position:10px center;
+    background-repeat:no-repeat;
 }
 
 a.button-tweet:hover {
@@ -289,6 +324,10 @@ a.button-tweet:hover {
 }
 
 @media (min-width:767px) {
+    #persNieuwsCTA {
+        display:none;  
+    }
+    
     nav {
         display:flex;
         justify-content: flex-end;
@@ -357,7 +396,7 @@ a.button-tweet:hover {
     }
     
     .bvItem {
-        max-width:25%;
+        width:25%;
         order:3;
     }
     
