@@ -401,6 +401,7 @@ a.button-tweet:hover {
         transition: none .4s ease;
     }
 
+    .current-page,
     nav > ul > li > a:hover {
         color: #292929;
         border-bottom: 2px solid #292929;
