@@ -1,13 +1,13 @@
 body {
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     background: #d6d6d6; /* Old browsers */ /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, #d6d6d6 0%,#ffffff 89%); /* Chrome10-25,Safari5.1-6 */
-    background: -webkit-radial-gradient(center ellipse, #d6d6d6 0%,#ffffff 89%);
-    background: radial-gradient(ellipse at center, #d6d6d6 0%,#ffffff 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6d6d6', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: -webkit-radial-gradient(center, ellipse cover, #d6d6d6 0%, #ffffff 89%); /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-radial-gradient(center ellipse, #d6d6d6 0%, #ffffff 89%);
+    background: radial-gradient(ellipse at center, #d6d6d6 0%, #ffffff 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d6d6', endColorstr='#ffffff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
     padding: 25px 0px 0px 0px;
 }
 
@@ -15,101 +15,118 @@ header {
     /*padding:25px 25px 0px 25px;*/
 }
 
+
 nav {
-    padding:0px 20px 0px 0px;
-    display:none;
+    padding: 0px 20px 0px 0px;
+    display: none;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-    color:#33A2EA;
+    color: #33A2EA;
     text-decoration: none;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
 }
 
 a:hover {
-    color:#2995db;
+    color: #2995db;
 }
 
 p {
-    color:#4D4D4D;
-    line-height:1.4em;
-    font-weight:lighter;
+    color: #4D4D4D;
+    line-height: 1.4em;
+    font-weight: lighter;
 }
 
 h1 {
-    color:#4D4D4D;
-    font-size:2.5em;
-    font-weight:lighter;
+    color: #4D4D4D;
+    font-size: 2.5em;
+    font-weight: lighter;
 }
 
 h2.header {
-    color:#4D4D4D;
-    font-size:1.2em;
-    font-weight:lighter;
+    color: #4D4D4D;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+.header-text h1{
+    margin-bottom: 15px;
 }
 
 .header-text > h2 {
-    margin-bottom:40px;
+    margin-bottom: 40px;
 }
 
 .header-text {
-    padding:0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .header-text p {
-    color:#808080;
-    font-size:1em;
-    line-height:1.4em;
-    margin-bottom:20px;
+    color: #808080;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-bottom: 20px;
 }
 
 .videoContainer {
-    position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
 .videoContainer iframe, .videoContainer object, .videoContainer embed {
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.CTA-button{
+    width: 130px;
+    text-align: center;
+}
+
+
+.header-callToAction .CTA-button:first-child{
+    margin: 0 10px 0 0;
 }
 
 .CTA-button:link,
 .CTA-button:visited,
 .CTA-button:hover,
 .CTA-button:active {
-    background-color:#33A2EA;
-    padding:20px 26px;
-    color:white;
+    background-color: #33A2EA;
+    padding: 20px 26px;
+    color: white;
     display: inline-block;
     text-transform: uppercase;
-    border-radius:2px;
+    border-radius: 2px;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
-    margin:4px 0px;
+    margin: 4px 0px;
 }
 
+
+
 .CTA-button:hover {
-    background-color:#2995db;
+    background-color: #2995db;
 }
 
 .header-price {
-    color:#808080;
-    margin-top:20px;
+    color: #808080;
+    margin-top: 20px;
 }
 
 .header-image {
     background-image: url(../images/Twitter-boek.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     height: 400px;
     background-position: center -25px;
     margin: 0px auto;
@@ -117,45 +134,46 @@ h2.header {
 }
 
 .aboutUs-text {
-    margin:40px 20px 40px 20px;
+    margin: 40px 20px 40px 20px;
 }
 
 .nieuws-text {
-    margin:40px 20px 40px 20px;
+    margin: 40px 20px 40px 20px;
 }
 
 h2 {
-    color:#4D4D4D;
-    font-size:2.2em;
-    font-weight:lighter;    
+    color: #4D4D4D;
+    font-size: 2.2em;
+    font-weight: lighter;
 }
 
 h3 {
-    color:#4D4D4D;
-    font-size:1.1em;
-    font-weight:lighter;  
-    margin-top:5px;
+    color: #4D4D4D;
+    font-size: 1.1em;
+    font-weight: lighter;
+    margin-top: 5px;
 }
 
 .aboutUs-text > .aboutUs-text-container > h3 {
-    margin-bottom:40px;
+    margin-bottom: 40px;
 }
 
 .aboutUs-picture {
-    width:100%;
+    width: 100%;
 }
 
+
 .bvItem-title {
-    margin:40px 20px 40px 20px;
+    margin: 40px 20px 40px 20px;
 }
 
 .bvItem-image img {
-    width:100%;
+    width: 100%;
 }
 
 .bvItem-image {
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .bvItem-image img {
@@ -164,115 +182,117 @@ h3 {
 }
 
 .bvItem-image:hover img {
-    -webkit-transform:scale(1.15); /* Safari and Chrome */ /* Firefox */ /* IE 9 */ /* Opera */
-     transform:scale(1.15);
+    -webkit-transform: scale(1.15); /* Safari and Chrome */ /* Firefox */ /* IE 9 */ /* Opera */
+    transform: scale(1.15);
 }
 
 .bvItem-text {
-    padding:16px;
-    position:relative;
-    line-height:1.3em;
+    padding: 16px 16px 32px 16px;
+    position: relative;
+    line-height: 1.3em;
+    font-size: 1.05em;
 }
 
 .bvItem-title {
-    position:relative;
+    position: relative;
 }
 
 .bvItem-text:before {
     width: 0;
     height: 0;
-    top:-20px;
+    top: -20px;
     position: absolute;
-    content:"";
+    content: "";
     border-style: solid;
     border-width: 0 15px 20px 15px;
     border-color: transparent transparent white transparent;
 }
 
 .section-social {
-    background-color:#F0F0F0;
+    background-color: #F0F0F0;
 }
 
 .social-container {
-    padding:50px;
+    padding: 50px;
 }
 
 .social-invitation h2 {
-    margin:20px 0px;
+    margin: 20px 0px;
 }
 
 .social-invitation-image {
-    width:100%;
-    margin-top:10px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 footer {
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-partners {
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-display:flex;
-    margin:20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-display: flex;
+    margin: 20px 0px;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
 }
 
 #uitgeverij {
-    background-image:url(../images/partners/uitgeverij.png);
-    width:59px;
+    background-image: url(../images/partners/uitgeverij.png);
+    width: 59px;
 }
 
 #darmkanker {
-    background-image:url(../images/partners/darmkanker.png);
-    width:70px;
+    background-image: url(../images/partners/darmkanker.png);
+    width: 70px;
 }
 
 #thomasmore {
-    background-image:url(../images/partners/thomas-more.png);
-    width:148px;
+    background-image: url(../images/partners/thomas-more.png);
+    width: 148px;
 }
 
 #designosource {
-    background-image:url(../images/partners/designosource.svg);
-    width:70px;
+    background-image: url(../images/partners/designosource.svg);
+    width: 70px;
 }
 
 .footer-partners a:link,
 .footer-partners a:visited,
 .footer-partners a:hover,
 .footer-partners a:active {
-    text-indent:-9999px;
-    background-size:contain;
-    background-repeat:no-repeat;
-    display:block;
-    height:70px;
-    min-width:50px;
-    background-position:center;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    height: 70px;
+    min-width: 50px;
+    background-position: center;
 }
 
 .footer-text {
-    text-align:center;
-    margin:10px 0px;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 0.8em;
 }
 
 .footer-text div {
-    line-height:25px;
+    line-height: 25px;
 }
 
 a.footer-madeBy:link,
 a.footer-madeBy:visited,
 a.footer-madeBy:hover,
 a.footer-madeBy:active {
-    color:#4D4D4D;
-    background-image:url(../images/egg-design.svg);
-    background-size:20px 20px;
-    background-repeat:no-repeat;
-    background-position:left center;
-    padding-left:25px;
-    line-height:25px;
+    color: #4D4D4D;
+    background-image: url(../images/egg-design.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 25px;
+    line-height: 25px;
 }
 
 .footer-partners {
@@ -280,120 +300,129 @@ a.footer-madeBy:active {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin:20px 0px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 20px 0px;
 }
 
 .bvItem-title-container > p {
-    margin-top:5px;
+    margin-top: 5px;
+}
+
+.bvItem-title-container h2{
+    margin-bottom: 30px;
+}
+
+.copyright-fotos{
+    font-size: 0.9em;
+    padding-top: 10px;
 }
 
 a.button-tweet:link,
 a.button-tweet:visited,
 a.button-tweet:hover,
-a.button-tweet:active
-{
-    background-color:#33A2EA;
-    color:white;
-    padding:20px 20px 20px 50px;
-    width:100%;
-    max-width:520px;
-    display:block;
-    border-radius:2px;
+a.button-tweet:active {
+    background-color: #33A2EA;
+    color: white;
+    padding: 20px 20px 20px 50px;
+    width: 100%;
+    max-width: 520px;
+    display: block;
+    border-radius: 2px;
     box-sizing: border-box;
-    margin-bottom:15px;
-    background-image:url(../images/Twitter-logo.png);
-    background-size:25px 20px;
-    background-position:10px center;
-    background-repeat:no-repeat;
+    margin-bottom: 15px;
+    background-image: url(../images/Twitter-logo.png);
+    background-size: 25px 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
 }
 
 a.button-tweet:hover {
-    background-color:#2995db;
+    background-color: #2995db;
 }
 
 .section-nieuws {
-    max-width:1000px;
-    margin:0px auto;
+    max-width: 1000px;
+    margin: 0px auto;
 }
 
 .nieuws-container {
-    margin:50px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
 }
 
 .nieuws-article-text p:last-child {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-@media (min-width:560px)
-{
+
+
+@media (min-width: 560px) {
     .header-image {
-    background-image: url(../images/Twitter-boek.png);
-    /* width: 50%; */
-    height: 400px;
-    background-position: center -25px;
-    margin: 0px auto;
-    background-size: 130%;
-}
+        background-image: url(../images/Twitter-boek.png);
+        /* width: 50%; */
+        height: 400px;
+        background-position: center -25px;
+        margin: 0px auto;
+        background-size: 130%;
+    }
 }
 
-@media (min-width:767px) {
+@media (min-width: 768px) {
     #persNieuwsCTA {
-        display:none;  
+        display: none;
     }
-    
+
     nav {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-box-pack: end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-        margin:0px 0px 30px 0px;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        margin: 0px 0px 30px 0px;
     }
-    
+
     nav > ul {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
-    
+
     nav > ul > li > a:link,
     nav > ul > li > a:visited,
     nav > ul > li > a:hover,
     nav > ul > li > a:active {
-        color:#4D4D4D;
-        font-size:.9em;
-        font-weight:bold;
+        color: #4D4D4D;
+        font-size: .9em;
+        font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
         -webkit-transition: none .4s ease;
         transition: none .4s ease;
     }
-    
+
     nav > ul > li > a:hover {
-        color:#292929;
-        border-bottom:2px solid #292929;
+        color: #292929;
+        border-bottom: 2px solid #292929;
     }
-    
+
     nav > ul > li:first-child {
-        margin-right:50px;
+        margin-right: 50px;
     }
-    
+
     .header-text-container {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
-            -ms-flex-direction: row-reverse;
-                flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
     }
-    
+
     .header-image {
         background-image: url(../images/Twitter-boek.png);
         width: 100%;
@@ -401,156 +430,156 @@ a.button-tweet:hover {
         background-position: center -50px;
         background-size: 175%;
     }
-    
+
     .footer-text {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
-    
+
     .bvItem-title {
-        width:50%;
-        margin:0px;
-        padding:0px 0px 0px 0px !important;
-        background-color:#F0F0F0;
+        width: 50%;
+        margin: 0px;
+        padding: 0px 0px 0px 0px !important;
+        background-color: #F0F0F0;
     }
-    
+
+    .bvItem-title-container h3{
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
+
     .bvItem-title-container {
         position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translateX(-50%) translateY(-50%);
-                transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+
     }
-    
+
     .bvItem {
-        width:25%;
-        -webkit-box-ordinal-group:4;
-            -ms-flex-order:3;
-        -webkit-order:3;
-                order:3;
+        width: 25%;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        -webkit-order: 3;
+        order: 3;
     }
-    
+
     #item1 {
-        -webkit-box-ordinal-group:2;
-            -ms-flex-order:1;
-        -webkit-order:1;
-                order:1;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1;
     }
-    
+
     #item2 {
-        -webkit-box-ordinal-group:2;
-            -ms-flex-order:1;
-        -webkit-order:1;
-                order:1;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1;
     }
-    
-    .bvItem-text {
-        /*-webkit-box-shadow: inset -3px 0px 8px 0px rgba(0,0,0,0.5);
-        -moz-box-shadow: inset -3px 0px 8px 0px rgba(0,0,0,0.5);
-        box-shadow: inset -3px 0px 8px 0px rgba(0,0,0,0.5);*/
-    }
-    
+
     .bvItem-title {
-        margin:0px;
-        padding:40px 20px 40px 20px;
+        margin: 0px;
+        padding: 40px 20px 40px 20px;
         box-sizing: border-box;
-        -webkit-box-ordinal-group:3;
-            -ms-flex-order:2;
-        -webkit-order:2;
-                order:2;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
     }
-    
+
     .section-bv {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -ms-flex-wrap:wrap;
-        -webkit-flex-wrap:wrap;
-            flex-wrap:wrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
     }
-    
+
     .social-container {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
-    
+
     .social-container > div {
-        width:45%;
+        width: 45%;
     }
-    
+
     .social-container > div:first-child {
-        width:55%;
-        margin-right:30px;
+        width: 55%;
+        margin-right: 30px;
     }
-    
+
     .social-invitation h2 {
-        margin:0px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
     }
 }
 
-@media (min-width:848px) {
+@media (min-width: 848px) {
     .section-aboutUs {
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
-    
+
     .aboutUs-text-container {
-        width:94%;
+        width: 94%;
     }
-    
+
     .aboutUs-text {
-        width:50%;
+        width: 50%;
     }
-    
+
     .aboutUs-picture {
-        width:50%;
-        height:50%;
+        width: 50%;
+        height: 50%;
     }
-    
+
     .nieuws-container {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap:wrap;
-        -webkit-flex-wrap:wrap;
-            flex-wrap:wrap;
+        -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
-    
+
     .nieuws-article {
-        max-width:45%;
-        margin-bottom:35px;
+        max-width: 45%;
+        margin-bottom: 35px;
     }
 }
 
-@media (min-width:1000px) {
+@media (min-width: 1000px) {
     .footer-container {
-        max-width:1000px;
-        margin:0px auto;
+        max-width: 1000px;
+        margin: 0px auto;
     }
-    
+
     .social-container {
-        max-width:1000px;
-        margin:0px auto;
+        max-width: 1000px;
+        margin: 0px auto;
     }
 }
 
-@media (min-width:1010px) {
+@media (min-width: 1010px) {
     .header-image {
         background-image: url(../images/Twitter-boek.png);
         width: 100%;
@@ -561,12 +590,13 @@ a.button-tweet:hover {
 }
 
 @media (min-width: 1200px) {
-.header-image {
-    background-image: url(../images/Twitter-boek.png);
-    width: 100%;
-    height: 400px;
-    background-position: center -80px;
-    background-size: 185%;
+    .header-image {
+        background-image: url(../images/Twitter-boek.png);
+        width: 100%;
+        height: 400px;
+        background-position: center -80px;
+        background-size: 185%;
+    }
 }
-}
+
 /* 320 - 767 - 960 - Container 1200 */
