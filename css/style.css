@@ -55,7 +55,7 @@ h2.header {
 }
 
 .header-text h1 {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .header-text > h2 {
@@ -67,7 +67,7 @@ h2.header {
 }
 
 .header-text p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.4em;
     margin-bottom: 20px;
 }
@@ -123,7 +123,7 @@ h2.header {
 }
 
 .header-image {
-    background-image: url(../images/boek.png);
+    background-image: url(../images/bookcover.png);
     background-repeat: no-repeat;
     height: 400px;
     background-position: center -25px;
@@ -184,7 +184,7 @@ h3 {
 }
 
 .bvItem-text {
-    padding: 16px 16px 40px 16px;
+    padding: 16px 16px 20px 16px;
     position: relative;
     line-height: 1.4em;
     font-size: 1.05em;
@@ -256,8 +256,8 @@ footer {
 }
 
 #designosource {
-    background-image: url(../images/partners/designosource.svg);
-    width: 70px;
+    background-image: url(../images/eggceptional.svg);
+    width: 140px;
 }
 
 .footer-partners a:link,
@@ -288,11 +288,11 @@ a.footer-madeBy:visited,
 a.footer-madeBy:hover,
 a.footer-madeBy:active {
     color: #4D4D4D;
-    background-image: url(../images/partners/egg-design.svg);
+    /*background-image: url(../images/partners/egg-design.svg);
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: left center;
-    padding-left: 25px;
+    padding-left: 25px;*/
     line-height: 25px;
 }
 
@@ -355,15 +355,19 @@ a.button-tweet:hover {
     margin-top: 10px;
 }
 
+.stand-out-text {
+    max-width:700px;
+}
+
 @media (min-width: 560px) {
 
     .bvItem-text {
-        padding: 16px 16px 32px 16px;
+        padding: 16px 16px 16px 16px;
 
     }
 
     .header-image {
-        background-image: url(../images/boek.png);
+        background-image: url(../images/bookcover.png);
         /* width: 50%; */
         height: 400px;
         background-position: center -25px;
@@ -430,7 +434,7 @@ a.button-tweet:hover {
     }
 
     .header-image {
-        background-image: url(../images/boek.png);
+        background-image: url(../images/bookcover.png);
         width: 100%;
         height: 400px;
         background-position: center -50px;
@@ -454,12 +458,12 @@ a.button-tweet:hover {
     }
 
     .stand-out-text {
-        font-size: 1.2em;
-        line-height: 1.5em;
+        font-size: 1.1em;
+        line-height: 1.35em;
     }
 
     .bvItem-title-container h3 {
-        font-size: 1.3em;
+        font-size: 1.1em;
         line-height: 1.5em;
     }
 
@@ -588,11 +592,16 @@ a.button-tweet:hover {
         max-width: 1000px;
         margin: 0px auto;
     }
+    
+    .header-text p {
+        min-width:700px;
+        max-width:700px;
+    }
 }
 
 @media (min-width: 1010px) {
     .header-image {
-        background-image: url(../images/boek.png);
+        background-image: url(../images/bookcover.png);
         width: 100%;
         height: 400px;
         background-position: center -50px;
@@ -602,7 +611,7 @@ a.button-tweet:hover {
 
 @media (min-width: 1200px) {
     .header-image {
-        background-image: url(../images/boek.png);
+        background-image: url(../images/bookcover.png);
         width: 100%;
         height: 400px;
         background-position: center -80px;
@@ -612,10 +621,10 @@ a.button-tweet:hover {
 
 @media (min-width: 1400px) {
 
-    .body-container {
+    /*.body-container {
         width: 1400px;
         margin: 0 auto;
-    }
+    }*/
 }
 
 /* 320 - 767 - 960 - Container 1200 */
