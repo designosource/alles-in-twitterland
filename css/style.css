@@ -9,6 +9,8 @@ header {
     background: radial-gradient(ellipse at center, #d6d6d6 0%, #ffffff 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d6d6d6', endColorstr='#ffffff', GradientType=1); /* IE6-9 fallback on horizontal gradient */
     padding: 25px 0px 0px 0px;
+    background-color: #d6d6d6;
+
 }
 
 .header-container {
@@ -53,6 +55,7 @@ h2.header {
     font-weight: lighter;
 }
 
+
 .header-text h1{
     margin-bottom: 15px;
 }
@@ -66,8 +69,7 @@ h2.header {
 }
 
 .header-text p {
-    color: #808080;
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.4em;
     margin-bottom: 20px;
 }
@@ -95,7 +97,7 @@ h2.header {
 
 
 .header-callToAction .CTA-button:first-child{
-    margin: 0 10px 0 0;
+    margin: 10px 10px 0 0;
 }
 
 .CTA-button:link,
@@ -121,7 +123,8 @@ h2.header {
 
 .header-price {
     color: #808080;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 0.95em;
 }
 
 .header-image {
@@ -189,8 +192,12 @@ h3 {
 .bvItem-text {
     padding: 16px 16px 32px 16px;
     position: relative;
-    line-height: 1.3em;
+    line-height: 1.4em;
     font-size: 1.05em;
+}
+
+.aboutUs-text-sub{
+    margin: 10px 0 0 0;
 }
 
 .bvItem-title {
@@ -448,9 +455,14 @@ a.button-tweet:hover {
         background-color: #F0F0F0;
     }
 
+    .stand-out-text{
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
     .bvItem-title-container h3{
         font-size: 1.3em;
-        line-height: 1.3em;
+        line-height: 1.5em;
     }
 
     .bvItem-title-container {
@@ -597,6 +609,14 @@ a.button-tweet:hover {
         height: 400px;
         background-position: center -80px;
         background-size: 185%;
+    }
+}
+
+@media (min-width: 1400px){
+
+    .body-container{
+        width: 1400px;
+        margin: 0 auto;
     }
 }
 
