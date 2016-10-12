@@ -160,6 +160,10 @@ h3 {
     width: 100%;
 }
 
+.aboutUs-text-container p{
+    margin: 0 0 20px 0;
+}
+
 .bvItem-title {
     margin: 40px 20px 40px 20px;
 }
