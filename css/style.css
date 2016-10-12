@@ -17,7 +17,6 @@ header {
     /*padding:25px 25px 0px 25px;*/
 }
 
-
 nav {
     padding: 0px 20px 0px 0px;
     display: none;
@@ -55,8 +54,7 @@ h2.header {
     font-weight: lighter;
 }
 
-
-.header-text h1{
+.header-text h1 {
     margin-bottom: 15px;
 }
 
@@ -90,13 +88,12 @@ h2.header {
     height: 100%;
 }
 
-.CTA-button{
+.CTA-button {
     width: 130px;
     text-align: center;
 }
 
-
-.header-callToAction .CTA-button:first-child{
+.header-callToAction .CTA-button:first-child {
     margin: 10px 10px 0 0;
 }
 
@@ -114,8 +111,6 @@ h2.header {
     transition: all .4s ease;
     margin: 4px 0px;
 }
-
-
 
 .CTA-button:hover {
     background-color: #2995db;
@@ -165,7 +160,6 @@ h3 {
     width: 100%;
 }
 
-
 .bvItem-title {
     margin: 40px 20px 40px 20px;
 }
@@ -190,13 +184,13 @@ h3 {
 }
 
 .bvItem-text {
-    padding: 16px 16px 32px 16px;
+    padding: 16px 16px 40px 16px;
     position: relative;
     line-height: 1.4em;
     font-size: 1.05em;
 }
 
-.aboutUs-text-sub{
+.aboutUs-text-sub {
     margin: 10px 0 0 0;
 }
 
@@ -316,11 +310,11 @@ a.footer-madeBy:active {
     margin-top: 5px;
 }
 
-.bvItem-title-container h2{
+.bvItem-title-container h2 {
     margin-bottom: 30px;
 }
 
-.copyright-fotos{
+.copyright-fotos {
     font-size: 0.9em;
     padding-top: 10px;
 }
@@ -361,9 +355,13 @@ a.button-tweet:hover {
     margin-top: 10px;
 }
 
-
-
 @media (min-width: 560px) {
+
+    .bvItem-text {
+        padding: 16px 16px 32px 16px;
+
+    }
+
     .header-image {
         background-image: url(../images/Twitter-boek.png);
         /* width: 50%; */
@@ -455,12 +453,12 @@ a.button-tweet:hover {
         background-color: #F0F0F0;
     }
 
-    .stand-out-text{
+    .stand-out-text {
         font-size: 1.2em;
         line-height: 1.5em;
     }
 
-    .bvItem-title-container h3{
+    .bvItem-title-container h3 {
         font-size: 1.3em;
         line-height: 1.5em;
     }
@@ -612,9 +610,9 @@ a.button-tweet:hover {
     }
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1400px) {
 
-    .body-container{
+    .body-container {
         width: 1400px;
         margin: 0 auto;
     }
