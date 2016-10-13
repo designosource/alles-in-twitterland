@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -63,7 +64,7 @@ h2.header {
 }
 
 .header-text {
-    padding: 20px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .header-text p {
@@ -122,18 +123,13 @@ h2.header {
     font-size: 0.95em;
 }
 
-
 .header-image {
     background-image: url(../images/bookcover.png);
     background-repeat: no-repeat;
-    height: 300px;
+    height: 400px;
     background-position: center -25px;
     margin: 0px auto;
     background-size: 162%;
-}
-
-.aboutUs-text-container span{
-    display: none;
 }
 
 .aboutUs-text {
@@ -165,14 +161,6 @@ h3 {
     width: 100%;
 }
 
-.aboutUs-text-container{
-    margin: 0 20px;
-}
-
-.aboutUs-text-container p{
-    margin: 0 0 20px 0;
-}
-
 .bvItem-title {
     margin: 40px 20px 40px 20px;
 }
@@ -197,7 +185,7 @@ h3 {
 }
 
 .bvItem-text {
-    padding: 16px 16px 25px 16px;
+    padding: 16px 16px 30px 16px;
     position: relative;
     line-height: 1.4em;
     font-size: 1.05em;
@@ -248,7 +236,7 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-display: flex;
-    margin: 20px;
+    margin: 20px 0px;
     -ms-flex-line-pack: center;
     align-content: center;
 }
@@ -319,10 +307,6 @@ a.footer-madeBy:active {
     margin: 20px 0px;
 }
 
-.footer-partners a{
-    margin: 0 5px;
-}
-
 .bvItem-title-container > p {
     margin-top: 5px;
 }
@@ -342,7 +326,7 @@ a.button-tweet:hover,
 a.button-tweet:active {
     background-color: #33A2EA;
     color: white;
-    padding: 20px 20px 20px 42px;
+    padding: 20px 20px 20px 50px;
     width: 100%;
     max-width: 520px;
     display: block;
@@ -372,51 +356,29 @@ a.button-tweet:hover {
     margin-top: 10px;
 }
 
-.stand-out-text {
-    max-width:700px;
-}
-
-.social-invitation h3{
-    line-height: 1.3em;
-}
-
-@media (min-width: 500px) {
-
-    .header-image {
-        background-image: url(../images/bookcover.png);
-        /* width: 50%; */
-        background-position: center -65px;
-        margin: 0px auto;
-        background-size: 160%;
-    }
-}
 
 @media (min-width: 560px) {
+
+    .bvItem-text {
+        padding: 16px 16px 16px 16px;
+
+    }
 
     .header-image {
         background-image: url(../images/bookcover.png);
         /* width: 50%; */
         height: 400px;
-        background-position: center -65px;
+        background-position: center -25px;
         margin: 0px auto;
-        background-size: 140%;
+        background-size: 130%;
     }
 }
 
+.extra-content{
+    margin-bottom: 20px;
+}
+
 @media (min-width: 768px) {
-
-    .header-text {
-        padding: 20px 20px 0px 20px;
-    }
-
-    .header-text-container{
-        height: 420px;
-    }
-
-    .extra-content{
-        display: none;
-    }
-
     #persNieuwsCTA {
         display: none;
     }
@@ -478,7 +440,7 @@ a.button-tweet:hover {
         width: 100%;
         height: 400px;
         background-position: center -50px;
-        background-size: 200%;
+        background-size: 175%;
     }
 
     .footer-text {
@@ -500,6 +462,7 @@ a.button-tweet:hover {
     .stand-out-text {
         font-size: 1.1em;
         line-height: 1.35em;
+        margin-bottom: 20px;
     }
 
     .bvItem-title-container h3 {
@@ -578,42 +541,13 @@ a.button-tweet:hover {
     .social-invitation h2 {
         margin: 0px 0px 20px 0px;
     }
-
-
-}
-
-@media (min-width: 800px) {
-    .header-image {
-        background-image: url(../images/bookcover.png);
-        width: 100%;
-        height: 400px;
-        background-position: center center;
-        background-size: 180%;
-    }
 }
 
 @media (min-width: 848px) {
-
-    .header-image {
-        background-image: url(../images/bookcover.png);
-        width: 100%;
-        height: 400px;
-        background-position: center center;
-        background-size: 160%;
-    }
-
-    .aboutUs-text {
-        margin: 40px 20px 0 20px;
-    }
-
     .section-aboutUs {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-    }
-
-    .aboutUs-text-container {
-        width: 94%;
     }
 
     .aboutUs-text {
@@ -657,66 +591,25 @@ a.button-tweet:hover {
         max-width: 1000px;
         margin: 0px auto;
     }
-    
-    .header-text p {
-        min-width: 450px;
-        max-width: 450px;
-    }
 
-    .extra-content{
-        display: block;
-    }
+}
 
-
+@media (min-width: 1010px) {
     .header-image {
         background-image: url(../images/bookcover.png);
         width: 100%;
         height: 400px;
-        background-position: center -90px;
-        background-size: 165%;
+        background-position: center -50px;
+        background-size: 200%;
     }
 }
-
 
 @media (min-width: 1200px) {
     .header-image {
         background-image: url(../images/bookcover.png);
         width: 100%;
         height: 400px;
-        background-position: center -140px;
-        background-size: 180%;
+        background-position: center -80px;
+        background-size: 185%;
     }
-
-    .aboutUs-text {
-        margin: 7% 0 0 20px;
-    }
-
-    .header-text p {
-        min-width: 500px;
-        max-width: 500px;
-    }
-
-
-}
-
-
-@media (min-width: 1400px) {
-
-    .aboutUs-text {
-        margin: 10% 0 0 20px;
-    }
-
-    .header-text p {
-        min-width: 600px;
-        max-width: 600px;
-    }
-
-    .header-image {
-        background-image: url(../images/bookcover.png);
-        width: 100%;
-        height: 400px;
-        background-position: center -280px;
-        background-size: 140%;
-    }
-
 }
