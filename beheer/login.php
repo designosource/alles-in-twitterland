@@ -1,41 +1,61 @@
 <?php
-?>
-<!doctype html>
+include('inc/sessiecontrole.inc.php');
+include_once('inc/feedbackbox.inc.php');
+include_once('classes/User.class.php');
+
+if (!empty($_POST['gebruikeremail']) && !empty($_POST['wachtwoord'])) {
+    $userLogin = new User();
+    $userLogin->setMSEmail($_POST['gebruikeremail']);
+    $userLogin->setMSWachtwoord($_POST['wachtwoord']);
+    try {
+        if ($userLogin->canLogin()) {
+            $_SESSION['login']['loggedin'] = 1;
+            include('inc/sessiecontrole.inc.php');
+        }
+    } catch (Exception $e) {
+        $errorException = $e->getMessage();
+        $feedback = buildFeedbackBox("danger", $errorException);
+    }
+} else if (isset($_POST['gebruikeremail']) && empty($_POST['gebruikeremail'])) {
+    $feedback = buildFeedbackBox("danger", "Vul je e-mailadres in.");
+} else if (isset($_POST['wachtwoord']) && empty($_POST['wachtwoord'])) {
+    $feedback = buildFeedbackBox("danger", "Vul je wachtwoord in.");
+}
+?><!doctype html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
     <title>Inloggen</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <style>
-        input {
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            margin: 25px 0 35px 0;
-        }
-    </style>
-
+    <meta name="description" content="Login met je IMDstagram account.">
+    <?php include_once('inc/header.inc.php'); ?>
 </head>
-<body class="beheer" style="margin-top: 50px">
-    <div class="container" style="max-width: 500px">
-        <a href="/index.html">Keer terug naar de website</a>
+<body class="beheer">
+<div class="container">
+    <a href="/index.html">Keer terug naar de website</a>
+    <h1>Inloggen</h1>
+    <form class="login-form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+        <?php
+        //toon errorboodschap
+        if (!empty($feedback)) {
+            echo $feedback;
+        }
+        ?>
+        <div class="form-group">
+            <input type="email" name="gebruikeremail" id="gebruikeremail" class="form-control login-field"
+                   value="<?php echo isset($_POST['gebruikeremail']) ? htmlspecialchars($_POST['gebruikeremail']) : '' ?>"
+                   placeholder="E-mailadres" required
+                   title="Vul je e-mailadres in." autofocus>
+            <label class="login-field-icon fui-user" for="gebruikeremail"><span class="labeltext">Gebruikersnaam of e-mailadres</span></label>
+        </div>
+        <div class="form-group">
+            <input type="password" name="wachtwoord" id="wachtwoord" class="form-control login-field"
+                   placeholder="Wachtwoord" required title="Vul je wachtwoord in.">
+            <label class="login-field-icon fui-lock" for="wachtwoord"><span class="labeltext">Wachtwoord</span></label>
+        </div>
+        <input type="submit" name="login" value="Inloggen" class="btn btn-primary btn-lg btn-block">
 
-        <h1>Beheer Alles in Twitterland</h1>
-
-        <form class="form-signin">
-            <label for="inputEmail" class="sr-only">E-mailadres</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="E-mailadres" required autofocus>
-            <label for="inputPassword" class="sr-only">Wachtwoord</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Wachtwoord" required>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="inputSubmit">Inloggen</button>
-        </form>
-
-    </div> <!-- /container -->
+    </form>
+</div>
 
 </body>
 </html>
