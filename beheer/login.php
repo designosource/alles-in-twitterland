@@ -41,19 +41,18 @@ if (!empty($_POST['gebruikeremail']) && !empty($_POST['wachtwoord'])) {
         }
         ?>
         <div class="form-group">
+            <label class="login-field-icon fui-user" for="gebruikeremail"><span class="labeltext">E-mailadres</span></label>
             <input type="email" name="gebruikeremail" id="gebruikeremail" class="form-control login-field"
                    value="<?php echo isset($_POST['gebruikeremail']) ? htmlspecialchars($_POST['gebruikeremail']) : '' ?>"
                    placeholder="E-mailadres" required
                    title="Vul je e-mailadres in." autofocus>
-            <label class="login-field-icon fui-user" for="gebruikeremail"><span class="labeltext">Gebruikersnaam of e-mailadres</span></label>
         </div>
         <div class="form-group">
+            <label class="login-field-icon fui-lock" for="wachtwoord"><span class="labeltext">Wachtwoord</span></label>
             <input type="password" name="wachtwoord" id="wachtwoord" class="form-control login-field"
                    placeholder="Wachtwoord" required title="Vul je wachtwoord in.">
-            <label class="login-field-icon fui-lock" for="wachtwoord"><span class="labeltext">Wachtwoord</span></label>
         </div>
         <input type="submit" name="login" value="Inloggen" class="btn btn-primary btn-lg btn-block">
-
     </form>
 </div>
 

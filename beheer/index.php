@@ -11,33 +11,42 @@ include_once('inc/feedbackbox.inc.php');
 </head>
 <body class="dashboard">
 <div class="container">
-    <a href="/index.html" target="_blank">Keer terug naar de website</a> -
-    <a href="logout.php">Uitloggen</a>
+    <a href="/index.html" target="_blank">Keer terug naar de website</a>
+    <div class="btn-group-vertical pull-right">
+        <a href="logout.php" class="text-right">Uitloggen</a>
+    </div>
     <h1>Alles in Twitterland beheren</h1>
 
-    <!--<form class="login-form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-        <?php
-        //toon errorboodschap
-        if (!empty($feedback)) {
-            echo $feedback;
-        }
-        ?>
-        <div class="form-group">
-            <input type="email" name="gebruikeremail" id="gebruikeremail" class="form-control login-field"
-                   value="<?php echo isset($_POST['gebruikeremail']) ? htmlspecialchars($_POST['gebruikeremail']) : '' ?>"
-                   placeholder="E-mailadres" required
-                   title="Vul je e-mailadres in." autofocus>
-            <label class="login-field-icon fui-user" for="gebruikeremail"><span class="labeltext">Gebruikersnaam of e-mailadres</span></label>
-        </div>
-        <div class="form-group">
-            <input type="password" name="wachtwoord" id="wachtwoord" class="form-control login-field"
-                   placeholder="Wachtwoord" required title="Vul je wachtwoord in.">
-            <label class="login-field-icon fui-lock" for="wachtwoord"><span class="labeltext">Wachtwoord</span></label>
-        </div>
-        <input type="submit" name="login" value="Inloggen" class="btn btn-primary btn-lg btn-block">
+    <?php
+    //toon errorboodschap
+    if (!empty($feedback)) {
+        echo $feedback;
+    }
+    ?>
 
-    </form>-->
-</div>
+    <h2>Pers- en nieuwsartikels</h2>
+    <a href="add.php" class="btn btn-primary">Maak een nieuwe pagina aan</a>
+
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Paginatitel</th>
+            <th>Aanmaakdatum</th>
+            <th>Wijzigen</th>
+            <th>Verwijderen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="#">Mijn eerste pagina</a></td>
+            <td>14/10/2016 23:30</td>
+            <td><a href="edit.php">Wijzigen</a></td>
+            <td><a href="#">Verwijderen</a></td>
+        </tr>
+        </tbody>
+    </table>
+
 
 </body>
 </html>

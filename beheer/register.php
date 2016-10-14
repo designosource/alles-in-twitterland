@@ -61,20 +61,21 @@ if (isset($_POST['registreer']) && !empty($_POST['registreer'])) {
 
         <!-- veld email -->
         <div class="form-group">
+            <label class="login-field-icon fui-mail" for="email"><span class="labeltext">E-mailadres</span></label>
             <input type="email" name="email" class="form-control"
                    value="<?php if (!empty($feedback) && $madeAccount === false) {
                        echo htmlspecialchars($email);
                    } ?>" placeholder="E-mailadres" id="email" required autofocus
                    title="Vul je Thomas More e-mailadres in.">
-            <label class="login-field-icon fui-mail" for="email"><span class="labeltext">E-mailadres</span></label>
         </div>
 
         <!-- veld wachtwoord -->
         <div class="form-group">
-            <input type="password" name="wachtwoord" id="wachtwoord" class="form-control"
-                   placeholder="Wachtwoord" required title="Kies een wachtwoord van minimaal 6 tekens.">
             <label class="login-field-icon fui-lock" for="wachtwoord"><span
                     class="labeltext">Wachwoord</span></label>
+            <input type="password" name="wachtwoord" id="wachtwoord" class="form-control"
+                   placeholder="Wachtwoord" required title="Kies een wachtwoord van minimaal 6 tekens.">
+
         </div>
 
         <!-- formulier verzenden -->
