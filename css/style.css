@@ -142,7 +142,7 @@ h2.header {
 }
 
 .nieuws-text {
-    margin: 40px 20px 40px 20px;
+    margin: 0 20px 40px 20px;
 }
 
 .nieuws-article-text h3{
@@ -355,10 +355,46 @@ a.button-tweet:hover {
     background-color: #2995db;
 }
 
+
 .section-nieuws {
     max-width: 1000px;
     margin: 0px auto;
 }
+
+.nieuws-container{
+    line-height: 1.4em;
+    color: #4D4D4D;
+}
+
+.bodyinput ol,
+.bodyinput ul{
+    list-style: inherit !important;
+    margin: 0 0 5px 0;
+}
+
+.bodyinput li{
+    margin: 0 0 15px 30px;
+}
+
+.bodyinput{
+    color: #4D4D4D;
+    line-height: 1.4em;
+
+}
+
+.bodyinput p{
+    margin: 0 0 15px 0;
+}
+
+.bodyinput strong{
+    font-weight: bold;
+}
+
+.bodyinput em{
+    font-style: italic;
+}
+
+
 
 .nieuws-container {
     margin: 50px 0px 0px 0px;

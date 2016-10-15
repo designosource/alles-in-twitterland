@@ -67,7 +67,7 @@ if (isset($_GET['delete']) && !empty($_GET['delete'])) {
 
         <?php foreach ($showPosts as $showPost): ?>
             <tr>
-                <td><a href="#"><?php echo htmlspecialchars($showPost['title']); ?></a></td>
+                <td><a href="../nieuws.php?artikel=<?php echo htmlspecialchars($showPost['content_id']); ?>"><?php echo htmlspecialchars($showPost['title']); ?></a></td>
                 <td><?php echo htmlspecialchars($showPost['created']); ?></td>
                 <td><a href="edit.php?edit=<?php echo htmlspecialchars($showPost['content_id']); ?>">Wijzigen</a></td>
 

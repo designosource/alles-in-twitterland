@@ -15,7 +15,7 @@ tinymce.init({
         {title: 'Test template 2', content: 'Test 2'}
     ],
     content_css: [
-        '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+        '//fonts.googleapis.com/css?family=Open+Sans:400,700',
         '//www.tinymce.com/css/codepen.min.css'
     ]
 });
