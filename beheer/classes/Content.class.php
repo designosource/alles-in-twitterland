@@ -4,10 +4,21 @@ include_once("Db.class.php");
 class Content
 {
     //membervariabelen
+    private $m_iId;
     private $m_sTitel;
     private $m_sInhoud;
 
     //getters en setters
+
+    public function getMSId()
+    {
+        return $this->m_iId;
+    }
+
+    public function setMSId($m_iId)
+    {
+        $this->m_iId = $m_iId;
+    }
 
     public function getMSTitel()
     {
@@ -42,7 +53,7 @@ class Content
         $statement->bindValue(":inhoud", $this->m_sInhoud, PDO::PARAM_STR);
         //statement uitvoeren
         if (!$statement->execute()) {
-            throw new Exception("de pagina kon niet worden toegevoegd door een technisch probleem.");
+            throw new Exception("de pagina kan niet worden toegevoegd door een technisch probleem.");
         } else {
             return true;
         }
@@ -59,5 +70,17 @@ class Content
         return $result;
     }
 
+    //content deleten
+    public function deleteContent()
+    {
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("DELETE FROM content WHERE content_id = :contentid");
+        $statement->bindValue(":contentid", $this->m_iId, PDO::PARAM_INT);
+        if (!$statement->execute()) {
+            throw new Exception("de pagina kan niet verwijderd worden door een technisch probleem.");
+        } else {
+            return true;
+        }
+    }
 
 }

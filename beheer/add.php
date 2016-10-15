@@ -12,6 +12,8 @@ if (isset($_POST['verzend']) && !empty($_POST['verzend'])) {
     try {
         if ($contentCreate->addContent()) {
             $feedback = buildFeedbackBox("success", "Pagina " . htmlspecialchars($_POST['titel']) . " is aangemaakt.");
+            $_POST['titel'] = "";
+            $_POST['inhoud'] = "";
         }
     } catch (Exception $e) {
         $errorException = $e->getMessage();
