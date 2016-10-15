@@ -31,7 +31,7 @@ if (!empty($_POST['gebruikeremail']) && !empty($_POST['wachtwoord'])) {
 </head>
 <body class="beheer">
 <div class="container">
-    <a href="/index.html">Keer terug naar de website</a>
+    <a href="/index.php">Keer terug naar de website</a>
     <h1>Inloggen</h1>
     <form class="login-form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
         <?php

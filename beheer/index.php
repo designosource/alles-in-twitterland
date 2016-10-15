@@ -38,7 +38,7 @@ if (isset($_GET['delete']) && !empty($_GET['delete'])) {
 </head>
 <body class="dashboard">
 <div class="container">
-    <a href="/index.html" target="_blank">Keer terug naar de website</a>
+    <a href="/index.php" target="_blank">Keer terug naar de website</a>
     <div class="btn-group-vertical pull-right">
         <a href="logout.php" class="text-right">Uitloggen</a>
     </div>
@@ -70,12 +70,23 @@ if (isset($_GET['delete']) && !empty($_GET['delete'])) {
                 <td><a href="#"><?php echo htmlspecialchars($showPost['title']); ?></a></td>
                 <td><?php echo htmlspecialchars($showPost['created']); ?></td>
                 <td><a href="edit.php?edit=<?php echo htmlspecialchars($showPost['content_id']); ?>">Wijzigen</a></td>
-                <td><a href="?delete=<?php echo htmlspecialchars($showPost['content_id']); ?>" style="color: red;">Verwijderen</a>
+
+                <td><a href="javascript:confirmDelete('?delete=<?php echo htmlspecialchars($showPost['content_id']); ?>')" style="color: red;">Verwijderen</a>
                 </td>
             </tr>
         <?php endforeach; ?>
 
         </tbody>
     </table>
+
+    <script>
+        function confirmDelete(delUrl) {
+            if (confirm("Weet je zeker dat je de geselecteerde pagina definitief wil wissen?")) {
+                document.location = delUrl;
+            }
+        }
+
+    </script>
+
 </body>
 </html>
