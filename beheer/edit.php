@@ -20,21 +20,19 @@ include_once('inc/feedbackbox.inc.php');
     <form action="" method="POST">
 
         <div class="form-group">
-            <label class="login-field-icon fui-user" for="titel"><span
-                    class="labeltext">Paginatitel</span></label>
+            <label class="login-field-icon" for="titel"><span class="labeltext">Paginatitel</span></label>
             <input type="text" name="titel" id="titel" class="form-control login-field"
-                   value="<?php echo isset($_POST['gebruikeremail']) ? htmlspecialchars($_POST['gebruikeremail']) : '' ?>"
+                   value="<?php echo isset($_POST['titel']) ? htmlspecialchars($_POST['titel']) : '' ?>"
                    placeholder="Titel van de pagina" required
                    title="Vul je e-mailadres in." autofocus>
         </div>
 
         <div class="form-group">
-            <label class="login-field-icon fui-user" for="inhoud"><span
-                    class="labeltext">Inhoud</span></label>
-            <textarea rows="10" required name="inhoud"></textarea>
+            <label class="login-field-icon" for="inhoud"><span class="labeltext">Inhoud</span></label>
+            <textarea rows="10" required name="inhoud"><?php echo isset($_POST['inhoud']) ? $_POST['inhoud'] : '' ?></textarea>
         </div>
         <input type="submit" name="verzend" value="Wijzigen" class="btn btn-primary">
-        <input type="submit" name="verzend" value="Annuleren" class="btn btn-danger">
+        <a href="index.php" class="btn btn-danger">Annuleren</a>
     </form>
 </div>
 </body>

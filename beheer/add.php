@@ -3,32 +3,23 @@ include('inc/sessiecontrole.inc.php');
 include_once('inc/feedbackbox.inc.php');
 include_once('classes/Content.class.php');
 
-echo "1";
 
 if (isset($_POST['verzend']) && !empty($_POST['verzend'])) {
-    if (!empty($_POST['titel']) && !empty($_POST['inhoud'])) {
-        $contentCreate = new Content();
-        $contentCreate->setMSTitel($_POST['titel']);
-        $contentCreate->setMSInhoud($_POST['inhoud']);
-        echo "2";
+    $contentCreate = new Content();
+    $contentCreate->setMSTitel($_POST['titel']);
+    $contentCreate->setMSInhoud($_POST['inhoud']);
 
-        try {
-            if ($contentCreate->addContent()) {
-
-            }
-        } catch (Exception $e) {
-            $errorException = $e->getMessage();
-            $feedback = buildFeedbackBox("danger", $errorException);
+    try {
+        if ($contentCreate->addContent()) {
+            $feedback = buildFeedbackBox("success", "Pagina " . htmlspecialchars($_POST['titel']) . " is aangemaakt.");
         }
-    } else if (isset($_POST['titel']) && empty($_POST['titel'])) {
-        $feedback = buildFeedbackBox("danger", "U heeft geen paginatitel ingevuld.");
-    } else if (isset($_POST['inhoud']) && empty($_POST['wachtwoord'])) {
-        $feedback = buildFeedbackBox("danger", "U heeft geen inhoud aangemaakt");
+    } catch (Exception $e) {
+        $errorException = $e->getMessage();
+        $feedback = buildFeedbackBox("danger", $errorException);
     }
-
+} else if (isset($_POST['verzend']) && empty($_POST['Opslaan'])) {
+    $feedback = buildFeedbackBox("danger", "controleer of u het veld paginatitel en inhoud heeft ingevuld.");
 }
-
-
 
 ?><!doctype html>
 <html lang="nl">
@@ -37,36 +28,12 @@ if (isset($_POST['verzend']) && !empty($_POST['verzend'])) {
     <title>Inhoud toevoegen</title>
     <?php include_once("inc/header.inc.php"); ?>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea',
-            height: 250,
-            theme: 'modern',
-            plugins: [
-                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-                'searchreplace wordcount visualblocks visualchars code fullscreen',
-                'insertdatetime media nonbreaking save table contextmenu directionality',
-                'emoticons template paste textcolor colorpicker textpattern imagetools'
-            ],
-            toolbar1: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media',
-            toolbar2: 'print preview',
-            image_advtab: true,
-            templates: [
-                {title: 'Test template 1', content: 'Test 1'},
-                {title: 'Test template 2', content: 'Test 2'}
-            ],
-            content_css: [
-                '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-                '//www.tinymce.com/css/codepen.min.css'
-            ]
-        });
-    </script>
-    <script>tinymce.init({selector: 'textarea'});</script>
-
+    <script src="../js/wysiwyg.js"></script>
 </head>
 <body class="dashboard">
 <div class="container">
     <a href="index.php">Keer terug naar het dashboard</a>
+
     <div class="btn-group-vertical pull-right">
         <a href="logout.php" class="text-right">Uitloggen</a>
     </div>
@@ -80,25 +47,26 @@ if (isset($_POST['verzend']) && !empty($_POST['verzend'])) {
     }
     ?>
 
-    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form class="login-form" action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 
         <div class="form-group">
-            <label class="login-field-icon fui-user" for="titel"><span
-                    class="labeltext">Titel</span></label>
+            <label class="login-field-icon" for="titel"><span class="labeltext">Titel</span></label>
             <input type="text" name="titel" id="titel" class="form-control login-field"
                    value="<?php echo isset($_POST['titel']) ? htmlspecialchars($_POST['titel']) : '' ?>"
                    placeholder="Titel van de pagina" required
-                   title="Vul je e-mailadres in." autofocus>
+                   title="Vul je e-mailadres in." autofocus >
         </div>
 
         <div class="form-group">
-            <label class="login-field-icon fui-user" for="inhoud"><span
-                    class="labeltext">Inhoud</span></label>
+            <label class="login-field-icon" for="inhoud"><span class="labeltext">Inhoud</span></label>
             <textarea required name="inhoud"
-                      id="inhoud"><?php echo isset($_POST['inhoud']) ? $_POST['inhoud'] : '' ?></textarea>
+                      id="inhoud"><?php echo isset($_POST['inhoud']) ? $_POST['inhoud'] : '' ?>
+            </textarea>
         </div>
+
+
         <input type="submit" name="verzend" value="Opslaan" class="btn btn-primary">
-        <a href="#" class="btn btn-danger">Annuleren</a>
+        <a href="index.php" class="btn btn-danger">Annuleren</a>
     </form>
 </div>
 
