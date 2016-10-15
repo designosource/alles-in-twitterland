@@ -1,6 +1,6 @@
 tinymce.init({
     selector: 'textarea',
-    height: 250,
+    height: 400,
     theme: 'modern',
     plugins: [
         'advlist autolink lists link image charmap print preview hr anchor pagebreak',
@@ -20,4 +20,7 @@ tinymce.init({
     ]
 });
 
-tinymce.init({selector: 'textarea'});
+tinymce.init({
+    selector: 'textarea',
+    language: 'nl',
+});

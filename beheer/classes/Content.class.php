@@ -83,4 +83,31 @@ class Content
         }
     }
 
+    //edit content
+    public function editContent()
+    {
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("UPDATE content SET title = :title, body = :body WHERE content_id = :contentid");
+        $statement->bindValue(":contentid", $this->m_iId, PDO::PARAM_INT);
+        $statement->bindValue(":title", $this->m_sTitel, PDO::PARAM_INT);
+        $statement->bindValue(":body", $this->m_sInhoud, PDO::PARAM_INT);
+        if (!$statement->execute()) {
+            throw new Exception("de pagina kan niet gewijzigd worden door een technisch probleem.");
+        } else {
+            return true;
+        }
+    }
+
+    //get selected content
+    public function getSelectedContent()
+    {
+        $conn = Db::getInstance();
+        $statement = $conn->prepare("SELECT * FROM content WHERE content_id = :contentid");
+        $statement->bindValue(":contentid", $this->m_iId, PDO::PARAM_INT);
+        $statement->execute();
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
 }
