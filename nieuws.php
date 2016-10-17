@@ -84,7 +84,7 @@ if (!isset($_GET['artikel']) || empty($_GET['artikel'])) {
                                         <h3>
                                             <a href="?artikel=<?php echo htmlspecialchars($showPost['content_id']); ?>"><?php echo htmlspecialchars($showPost['title']); ?></a>
                                         </h3>
-                                        <p class="nieuws-article-caption"><?php $output = strip_tags($showPost['body'], '<br><p>'); $small = substr($output, 0, 300); echo $small; echo "<p><a href='?artikel=" . htmlspecialchars($showPost['content_id']) . "'>Lees verder</a></p>"; ?></p>
+                                        <p class="nieuws-article-caption"><?php $output = strip_tags($showPost['body'], '<br><p>'); $small = substr($output, 0, 300); echo $small; echo "...<p><a href='?artikel=" . htmlspecialchars($showPost['content_id']) . "'>Lees verder</a></p>"; ?></p>
                                     </div>
                                 </div>
                             <?php endforeach; ?>
